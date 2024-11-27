@@ -36,8 +36,11 @@ algoritmo_genetico <- function(matrizDistancias, tamPoblacion, numGeneraciones, 
     iterar <- 1
     while (length(nuevaPoblacion) < tamPoblacion) {
       padres <- seleccion(poblacion, core)
+
       hijos <- crucePMX(padres[[1]], padres[[2]], core)
+
       nuevaPoblacion <- c(nuevaPoblacion, list(aplicarMutacion(hijos[[1]]), aplicarMutacion(hijos[[2]])))
+
     }
 
     poblacion <- nuevaPoblacion[1:tamPoblacion]
@@ -78,10 +81,10 @@ generarPoblacionInicial <- function(tamPoblacion, core) {
 seleccion <- function(poblacion, core) {
   tamTorneo <- 3
   torneo <- sample(poblacion, tamTorneo, replace = FALSE)
-  padre1 <- torneo[[which.max(sapply(torneo, function(sol) calcularAptitud(sol, core)))]]
-  torneo <- setdiff(torneo, list(padre1))
-  padre2 <- torneo[[which.max(sapply(torneo, function(sol) calcularAptitud(sol, core)))]]
-  return(list(padre1, padre2))
+  indices <- order(sapply(torneo, function(sol) calcularAptitud(sol, core)), decreasing = TRUE)[1:2]
+  padres <- torneo[indices]
+
+  return(list(padres[[1]], padres[[2]]))
 }
 
 # Cruce PMX (Partial-Mapped Crossover)

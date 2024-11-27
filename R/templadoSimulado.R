@@ -46,7 +46,7 @@ templado_simulado <- function(matrizDistancias, temperaturaInicial, tasaEnfriami
       # Calcular el coste de la nueva solución
       costeTmp <- core$funcionObjetivo(solucionTmp)
       delta <- costeTmp - coste
-      probAceptacion <- exp(-delta / temperatura)
+      probAceptacion <- min(1,exp(-delta / temperatura))
 
       # Decidir si se acepta la nueva solución
       if (delta < 0 || runif(1) < probAceptacion) {
