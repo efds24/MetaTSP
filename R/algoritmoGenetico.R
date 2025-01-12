@@ -4,6 +4,7 @@
 #' @param tamPoblacion Tamaño de la población.
 #' @param numGeneraciones Número de generaciones a realizar.
 #' @param porcentajeElistismo Porcentaje de la población que se conserva en cada generación.
+#' @param maxIterSinCambios Número de iteraciones sin cambios
 #' @return Lista con los resultados del algoritmo genético.
 algoritmo_genetico <- function(matrizDistancias, tamPoblacion, numGeneraciones, porcentajeElistismo) {
 
@@ -23,9 +24,9 @@ algoritmo_genetico <- function(matrizDistancias, tamPoblacion, numGeneraciones, 
     # Selección de la nueva población
     nuevaPoblacion <- poblacion[order(sapply(poblacion, function(sol) calcularAptitud(sol, core)), decreasing = TRUE)][1:elitismo]
 
-    if (core$funcionObjetivo(nuevaPoblacion[[1]]) == costeAnterior) {
+    if (core$funcionObjetivo(nuevaPoblacion[[1]]) - costeAnterior < 1e-6) {
       iteracionesSinCambios <- iteracionesSinCambios + 1
-      if (iteracionesSinCambios == 10) break
+      if (iteracionesSinCambios == maxIterSinCambios) break
     } else {
       iteracionesSinCambios <- 0
       costeAnterior <- core$funcionObjetivo(nuevaPoblacion[[1]])
