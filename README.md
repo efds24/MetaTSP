@@ -16,7 +16,7 @@ Para instalar la librería ejecuta lo siguiente.
 
 ```
 install.packages("devtools")
-devtools::install_github("efds24/MetaTSP")
+devtools::install_github("efds24/MetaTSP", force = TRUE)
 ```
 
 ### Uso
@@ -253,9 +253,9 @@ cat("Costo de la mejor ruta: ", resultados$mejorCoste, "\n")
 
 Comprueba el archivo [CONTRIBUTING.md](CONTRIBUTING.md) para los detalles del código de conducta, y el proceso para mandarnos solicitudes de cambio.
 
-## Authors
+## Autores
 
-* **Elena Fernández** - *Trabajo inicial*
+* **Elena Fernández**
 
 ## Licencia
 
