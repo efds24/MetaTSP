@@ -251,7 +251,7 @@ cat("Costo de la mejor ruta: ", resultados$mejorCoste, "\n")
 
 ## Contributing
 
-Comprueba el archivo [CONTRIBUTING.md] para los detalles del código de conducta, y el proceso para mandarnos solicitudes de cambio.
+Comprueba el archivo [CONTRIBUTING.md](CONTRIBUTING.md) para los detalles del código de conducta, y el proceso para mandarnos solicitudes de cambio.
 
 ## Authors
 
@@ -259,5 +259,5 @@ Comprueba el archivo [CONTRIBUTING.md] para los detalles del código de conducta
 
 ## Licencia
 
-Este proyecto tiene licencia del MIT - mira el archivo [LICENSE.md](LICENSE.md) para más detalles
+Este proyecto tiene licencia del MIT - mira el archivo [LICENSE.md](LICENSE) para más detalles
 
