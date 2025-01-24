@@ -1,10 +1,10 @@
 Package: MetaTSP
 Type: Package
-Title: Metaheurísticas del TSP
+Title: Metaheuristicas del TSP
 Version: 0.1.0
-Author: Elena Fernández
-Maintainer: Elena Fernández
-Description: Funciones para aplicar algunas metaheurísticas al TSP.
+Author: Elena Fernandez
+Maintainer: Elena Fernandez
+Description: Funciones para aplicar algunas metaheuristicas al TSP.
 License: MIT
 Encoding: UTF-8
 LazyData: true
