@@ -165,7 +165,7 @@ A continuación se presenta un ejemplo de cómo usar la función `algoritmo_gene
 
 ```r
 # Cargar la librería
-library(nombredelpaquete)
+library(MetaTSP)
 
 # Definir una matriz de distancias entre las ciudades
 matrizDistancias <- matrix(c(0, 100, 174, 158, 135, 125, 74,
