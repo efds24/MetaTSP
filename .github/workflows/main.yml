@@ -1,0 +1,9 @@
+name: Deploy to CRAN
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy-cran-repo:
+    uses: r-wasm/actions/.github/workflows/deploy-cran-repo.yml@v2
