@@ -6,7 +6,7 @@
 #' @param porcentajeElistismo Porcentaje de la población que se conserva en cada generación.
 #' @param maxIterSinCambios Número de iteraciones sin cambios
 #' @return Lista con los resultados del algoritmo genético.
-algoritmo_genetico <- function(matrizDistancias, tamPoblacion, numGeneraciones, porcentajeElistismo) {
+algoritmo_genetico <- function(matrizDistancias, tamPoblacion, numGeneraciones, porcentajeElistismo, maxIterSinCambios) {
 
   core <- crear_core_tsp(matrizDistancias)
 
